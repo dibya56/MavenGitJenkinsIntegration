@@ -15,16 +15,14 @@ public class SearchTest {
 	public void beforeTest() {
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("https://www.flipkart.com/");
+		driver.get("https://phptravels.com/demo/");
 	}
 	
 	@Test
 	public void test() {
 		try {
 			Thread.sleep(3000);
-			driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[1]/div[1]/div[2]/div[2]/form/div/div/input")).sendKeys("Shoes");
-			Thread.sleep(3000);
-			driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[1]/div[1]/div[2]/div[2]/form/div/button")).click();
+			driver.findElement(By.xpath("//*[@id=\"TRAVEL_TECHNOLOGY_PARTNER\"]")).click();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
